@@ -1,0 +1,135 @@
+:root {
+    /* PRIMARY COLOUR */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* NEUTRAL COLOUR */
+    /* (paragraphs) */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* (background, headings, buttons) */
+    --Very-light-gray : hsl(0, 0%, 95%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--Very-light-gray);
+}
+
+.container {
+   width: 50vw;
+    margin: 0 auto;  
+}
+
+.wrapper {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/* CARD ITEMS */
+.card {
+    padding: 35px;
+    color: var(--Transparent-white);
+}
+
+.icon {
+    width: 30%;
+    margin-bottom: 6px;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Very-light-gray);
+}
+
+p {
+    font-size: 12px;
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 70px;
+}
+
+.sedan {
+    background-color: var(--Bright-orange);
+}
+
+.suv {
+    background-color: var(--Dark-cyan);
+}
+
+.luxury {
+    background-color: var(--Very-dark-cyan);
+}
+
+
+/* BUTTONS */
+button {
+    padding: 12px 25px;
+    border-radius: 50px;
+    background-color: var(--Very-light-gray);
+    border: 1px solid var(--Very-light-gray);
+    cursor: pointer;   
+}
+
+.sedan button {
+    color: var(--Bright-orange);
+}
+.suv button {
+    color: var(--Dark-cyan);
+}
+.luxury button {
+    color: var(--Very-dark-cyan);
+}
+
+button:active{
+    background-color: inherit;
+    color: white;
+    border: 1px solid white;
+    
+}
+
+/* IPAD SCREEN SIZE */
+@media only screen and (max-width: 1000px) and (min-width:600px){
+    .container {
+        width: 90vw;
+    }
+}
+
+/* MOBILE SCREEN SIZE */
+@media only screen and (max-width:600px){
+  
+    .container {
+        width: 60vw;
+        margin:2rem auto;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        
+    }
+    .card {
+        padding: 35px;
+    }
+
+    .icon {
+        width: 25%;
+        margin-bottom: 6px;
+    }
+
+    p{
+        margin-bottom: 20px;
+    }
+}
